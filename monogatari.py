@@ -54,7 +54,7 @@ def on_close():
 
 
 root = tk.Tk()
-root.title("Monogatari")
+root.title("MONOGATARI - Text Editor")
 root.geometry("500x500")
 root.configure(background="#000000")
 

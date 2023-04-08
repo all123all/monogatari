@@ -31,6 +31,7 @@ $ sudo apt-get install tk
 - [ ] Black background and a colorpicker option to choose another color
 - [ ] Test routine for the basic functionalities
 - [ ] Release a package
+- [ ] The close function is being called even when the file isn't modified
 
 ## Contribute to MONOGATARI - Text Editor
 

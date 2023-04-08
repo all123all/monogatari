@@ -52,6 +52,11 @@ def on_close():
             save_file()
     root.destroy()
 
+def change_font_size():
+    global text_widget
+    font_size = simpledialog.askinteger("Font Size", "Enter the font size:")
+    if font_size:
+        text_widget.configure(font=("TkDefault", font_size))
 
 root = tk.Tk()
 root.title("MONOGATARI - Text Editor")
@@ -61,6 +66,7 @@ root.configure(background="#000000")
 text_widget = tk.Text(
     root, undo=True, background="#000000", foreground="#FFFFFF")
 text_widget.pack(fill=tk.BOTH, expand=True)
+text_widget.config(insertbackground="white")
 
 menu_bar = tk.Menu(root)
 file_menu = tk.Menu(menu_bar, tearoff=0)
@@ -75,6 +81,7 @@ file_menu.add_command(label="Change Background Color",
 file_menu.add_separator()
 file_menu.add_command(label="Exit", command=on_close)
 options_menu.add_command(label="Background", command=change_background_color)
+options_menu.add_command(label="Font Size", command=change_font_size)
 options_menu.add_command(label="Mystery", command=print("What's next?"))
 menu_bar.add_cascade(label="File", menu=file_menu)
 menu_bar.add_cascade(label="Customize", menu=options_menu)
